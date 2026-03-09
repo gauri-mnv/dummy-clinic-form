@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+/* Base Styles */
+body {
+    background-color: #f4f7f9;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    color: #2d3748;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form Card Container */
+.form-card {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Clinic Header */
+.clinic-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 25px 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-right: 20px;
+    backdrop-filter: blur(5px);
 }
 
-.App-link {
-  color: #61dafb;
+.doctor-info h2 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 0.5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.doctor-info p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Step Content */
+.step-container {
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #1a73e8;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #edf2f7;
+    display: flex;
+    align-items: center;
+}
+
+/* Form Fields */
+.field-row {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="time"], 
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+/* Options (Radio/Checkbox) */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.option-box {
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+.option-box.selected {
+    border-color: #1a73e8;
+    background: #eff6ff;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+/* Vitals Grid */
+.vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.vital-box {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #1a73e8;
+}
+
+.vital-box strong {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.nav-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.nav-btn:active { transform: scale(0.98); }
+
+.next, .finish {
+    background: #1a73e8;
+    color: white;
+    flex-grow: 1;
+}
+
+.next:hover, .finish:hover { background: #1557b0; }
+
+.back {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.back:hover { background: #e2e8f0; }
+
+/* Signature & Stars */
+.signature-area {
+    border: 1px dashed #cbd5e0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff;
+    font-family: 'Dancing Script', cursive; /* Optional google font */
+    font-size: 26px;
+    color: #2d3748;
+}
+
+.stars {
+    color: #ecc94b;
+    font-size: 22px;
+}
+
+/* Footer Meta */
+.meta {
+    padding: 20px;
+    background: #f8fafc;
+    border-top: 1px solid #edf2f7;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
 }
