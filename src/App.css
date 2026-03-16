@@ -205,3 +205,11 @@ input:focus, textarea:focus {
     color: #94a3b8;
     font-size: 12px;
 }
+
+img, video, audio {
+  page-break-inside: avoid;
+}
+img, .stamp, canvas {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
